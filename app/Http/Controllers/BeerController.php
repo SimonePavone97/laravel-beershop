@@ -9,6 +9,9 @@ class BeerController extends Controller
 {
     //
     public function home(){
-        return view('home');
+
+        $beers = Beer::all();
+
+        return view('home', compact('beers'));
     }
 }
