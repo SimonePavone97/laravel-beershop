@@ -15,6 +15,10 @@ class CreateBeersTable extends Migration
     {
         Schema::create('beers', function (Blueprint $table) {
             $table->id();
+            $table->string('nome', 25);
+            $table->string('tipologia', 25);
+            $table->string('tasso_alcolico', 25);
+            $table->integer('litri');
             $table->timestamps();
         });
     }
